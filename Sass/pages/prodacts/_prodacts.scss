@@ -1,0 +1,150 @@
+.paramp{
+    padding: 154px 0 50px;
+    &__loading,
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    &__loading__img,
+    &__img-card{
+        height: 500px;
+        width:calc(50% - 50px);
+    }
+    &__loading__info,
+    &__info{
+        width:calc(50% - 50px);
+    }
+    &__img-card img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+    &__title{
+        font-size: 44px;
+        font-weight: 600;
+        line-height: 62px;
+        margin-bottom: 20px;
+    }
+    &__desc{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #454F5B;
+        margin-bottom: 20px;
+    }
+    &__desc span{
+        font-size: 14px;
+        font-weight: 600;
+        color: #161C24;
+    }
+    &__info__card{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+    &__info__desc{
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28.64px;
+        color: #161C24;      
+    }
+    &__btn{
+        margin-top: 40px;
+        padding: 10px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        color: #fff;
+        background-color: #4295E4;
+    }
+    &__loading__desc{
+        height: 30px;
+        margin-bottom: 30px;
+    }
+    &__loading__desc:nth-child(1){
+        height: 80px;
+    }
+    &__loading__desc:nth-child(2){
+        height: 100px;
+    }
+    &__loading__desc:nth-child(3){
+        width: 60%; 
+    }
+    &__loading__desc:nth-child(4){
+        width: 50%;
+    }
+    &__loading__desc:nth-child(5){
+        width: 90%;
+    }
+}
+.paramp__loading-anime{
+    background:linear-gradient(90deg, #ddd,#aaa,#ddd);
+    background-size: 200%;
+    animation: paramAnime 1s linear 0s infinite;
+}
+
+@keyframes paramAnime {
+    to{
+        background-position: 200%;
+    }
+}
+
+@media (max-width:1250px){
+    .paramp{
+        &__loading,
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__loading__img,
+        &__img-card{
+            height: 500px;
+            width:calc(100%);
+        }
+        &__loading__info,
+        &__info{
+            width:calc(100%);
+        }
+    }
+}
+
+@media (max-width:600px){
+    .paramp{
+        &__title{
+            font-size: 34px;
+            line-height: 44px;
+        }
+        &__info__desc{
+            font-size: 20px;    
+        }
+        &__desc{
+            font-size: 12px;
+        }
+    }
+}
+
+
+@media (max-width:500px){
+    .paramp{
+        &__title{
+            font-size: 26px;
+            line-height: 36px;
+        }
+        &__info__desc{
+            font-size: 18px;    
+        }
+        &__desc{
+            font-size: 10px;
+            line-height: 15px;
+        }
+        &__btn{
+            margin-top: 40px;
+            padding: 6px 20px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+        }
+    }
+}
